@@ -39,6 +39,7 @@ h1 {
     hsla(240, 100%, 50%)
   );
   background-clip: text;
+  -webkit-background-clip: text; /* For Chrome */
   color: transparent;
 }
 
