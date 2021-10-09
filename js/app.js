@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const scoreText = document.getElementById("scoreText");
 
 const images = [
   "doge.jpg",
@@ -18,8 +19,8 @@ function checkFlippedCards() {
       flippedCards[0].style.getPropertyValue("--card-img") ===
       flippedCards[1].style.getPropertyValue("--card-img")
     ) {
-      ++score;
       setTimeout(() => {
+        scoreText.textContent = `Score: ${++score}`;
         flippedCards.forEach((card) => card.style.removeProperty("--card-img"));
         flippedCards = [];
       }, 500);
