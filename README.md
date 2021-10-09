@@ -1,5 +1,7 @@
 # Memory Game
 
+Match the cards
+
 ## Table of contents
 
 - [Overview](#overview)
