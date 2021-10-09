@@ -1,5 +1,7 @@
 const grid = document.querySelector(".grid");
 const scoreText = document.getElementById("scoreText");
+const overlay = document.querySelector(".overlay");
+const playAgainBtn = document.getElementById("play-again");
 
 const images = [
   "doge.jpg",
@@ -13,6 +15,13 @@ const images = [
 let score = 0;
 let flippedCards = [];
 
+function checkGameState() {
+  if (score === images.length) {
+    // game ended
+    overlay.classList.add("show");
+  }
+}
+
 function checkFlippedCards() {
   if (flippedCards.length === 2) {
     if (
@@ -21,6 +30,7 @@ function checkFlippedCards() {
     ) {
       setTimeout(() => {
         scoreText.textContent = `Score: ${++score}`;
+        checkGameState();
         flippedCards.forEach((card) => card.style.removeProperty("--card-img"));
         flippedCards = [];
       }, 500);
@@ -62,8 +72,25 @@ function createCards() {
 }
 
 function renderCards(cards) {
+  grid.innerHTML = "";
   cards.forEach((card) => grid.appendChild(card));
 }
 
 const cards = createCards();
 renderCards(cards);
+
+playAgainBtn.addEventListener("click", function () {
+  // reset score
+  score = 0;
+  scoreText.textContent = "Score: 0";
+
+  // reset cards
+  const cards = createCards();
+  renderCards(cards);
+
+  // reset flipped cards
+  flippedCards = [];
+
+  // remove overlay
+  overlay.classList.remove("show");
+});
