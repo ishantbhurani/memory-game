@@ -1,5 +1,3 @@
-// document.querySelector(".card").style.setProperty("--card-img", "orange");
-
 const grid = document.querySelector(".grid");
 
 const images = [
@@ -45,7 +43,7 @@ function createCards() {
       `url(../images/${images[i % len]})`
     );
 
-    newCard.classList.add("card", "flippe");
+    newCard.classList.add("card");
     newCard.addEventListener("click", function () {
       this.classList.add("flipped");
       if (
