@@ -35,16 +35,16 @@ function checkFlippedCards() {
       flippedCards[0].style.getPropertyValue("--card-img") ===
       flippedCards[1].style.getPropertyValue("--card-img")
     ) {
-      setTimeout(() => {
-        scoreText.textContent = `Score: ${++score}`;
-        checkGameState();
-        flippedCards.forEach((card) => card.style.removeProperty("--card-img"));
-        flippedCards = [];
-        timeLeft += 2;
-      }, 500);
+      scoreText.textContent = `Score: ${++score}`;
+      checkGameState();
+      flippedCards[0].style.removeProperty("--card-img");
+      flippedCards[1].style.removeProperty("--card-img");
+      flippedCards = [];
+      timeLeft += 2;
     } else {
       setTimeout(() => {
-        flippedCards.forEach((card) => card.classList.remove("flipped"));
+        flippedCards[0].classList.remove("flipped");
+        flippedCards[1].classList.remove("flipped");
         flippedCards = [];
       }, 500);
     }
@@ -62,7 +62,7 @@ function createCards() {
       `url(../images/${images[i % len]})`
     );
 
-    newCard.classList.add("card");
+    newCard.classList.add("card", "flipped");
     newCard.addEventListener("click", function () {
       this.classList.add("flipped");
       if (
