@@ -91,6 +91,15 @@ header div {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   cursor: pointer;
   animation: btnAnim 2s infinite;
+  display: none;
+}
+
+.overlay.game-won #continue {
+  display: inline-block;
+}
+
+.overlay:not(.game-won) #play-again {
+  display: inline-block;
 }
 
 @keyframes btnAnim {
