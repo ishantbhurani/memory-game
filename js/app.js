@@ -2,6 +2,8 @@ const grid = document.querySelector(".grid");
 const scoreText = document.getElementById("scoreText");
 const overlay = document.querySelector(".overlay");
 const playAgainBtn = document.getElementById("play-again");
+const continueBtn = document.getElementById("continue");
+const levelText = document.getElementById("levelText");
 
 const images = [
   "doge.jpg",
@@ -14,6 +16,7 @@ const images = [
 
 let score = 0;
 let flippedCards = [];
+let gameLevel = 1;
 
 function checkGameState() {
   if (score === images.length) {
@@ -90,6 +93,28 @@ playAgainBtn.addEventListener("click", function () {
 
   // reset flipped cards
   flippedCards = [];
+
+  // remove overlay
+  overlay.classList.remove("show");
+});
+
+continueBtn.addEventListener("click", function () {
+  // reset score
+  score = 0;
+  scoreText.textContent = "Score: 0";
+
+  // reset flipped cards
+  flippedCards = [];
+
+  // level up
+  gameLevel += 1;
+  levelText.textContent = `Level: ${gameLevel}`;
+
+  images.push(images[Math.floor(Math.random() * 6)]);
+
+  // reset cards
+  const cards = createCards();
+  renderCards(cards);
 
   // remove overlay
   overlay.classList.remove("show");
