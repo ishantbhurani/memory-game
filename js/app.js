@@ -62,7 +62,7 @@ function createCards() {
       `url(../images/${images[i % len]})`
     );
 
-    newCard.classList.add("card", "flipped");
+    newCard.classList.add("card");
     newCard.addEventListener("click", function () {
       this.classList.add("flipped");
       if (
