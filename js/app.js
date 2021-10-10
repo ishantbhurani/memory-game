@@ -4,6 +4,7 @@ const overlay = document.querySelector(".overlay");
 const playAgainBtn = document.getElementById("play-again");
 const continueBtn = document.getElementById("continue");
 const levelText = document.getElementById("levelText");
+const timeLeftText = document.getElementById("timeLeftText");
 
 const images = [
   "doge.jpg",
@@ -17,11 +18,14 @@ const images = [
 let score = 0;
 let flippedCards = [];
 let gameLevel = 1;
+let timeLeft = 15;
 
 function checkGameState() {
   if (score === images.length) {
     // game ended
     overlay.classList.add("show");
+    overlay.classList.add("game-won");
+    timeLeft = 0;
   }
 }
 
@@ -36,6 +40,7 @@ function checkFlippedCards() {
         checkGameState();
         flippedCards.forEach((card) => card.style.removeProperty("--card-img"));
         flippedCards = [];
+        timeLeft += 2;
       }, 500);
     } else {
       setTimeout(() => {
@@ -96,6 +101,9 @@ function gameReset() {
 
   // remove overlay
   overlay.classList.remove("show");
+  overlay.classList.remove("game-won");
+
+  timeLeft = 15;
 }
 
 playAgainBtn.addEventListener("click", function () {
@@ -111,4 +119,17 @@ continueBtn.addEventListener("click", function () {
   images.push(images[Math.floor(Math.random() * 6)]);
 
   gameReset();
+
+  timeLeft += 5;
 });
+
+setInterval(() => {
+  if (timeLeft > 0) {
+    --timeLeft;
+    timeLeftText.textContent = timeLeft;
+  } else {
+    console.log("Timeout!");
+    // end game
+    overlay.classList.add("show");
+  }
+}, 1000);
