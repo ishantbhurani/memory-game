@@ -108,7 +108,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, 150px);
   gap: 1em;
-  place-content: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
