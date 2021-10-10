@@ -43,8 +43,7 @@ function checkFlippedCards() {
       timeLeft += 2;
     } else {
       setTimeout(() => {
-        flippedCards[0].classList.remove("flipped");
-        flippedCards[1].classList.remove("flipped");
+        flippedCards.forEach((card) => card.classList.remove("flipped"));
         flippedCards = [];
       }, 500);
     }
