@@ -7,6 +7,7 @@ Match the cards before you run out of time! ⏰
 - [Overview](#overview)
   - [Screenshots](#screenshots)
   - [Links](#links)
+  - [Features](#features)
 - [Run Locally](#run-locally)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -30,6 +31,13 @@ Match the cards before you run out of time! ⏰
 ### Links
 
 - Live Site URL: [https://ishantbhurani.github.io/memory-game/](https://ishantbhurani.github.io/memory-game/)
+
+### Features
+
+- Flipping cards
+- Cards arranged randomly
+- Countdown timer
+- Levels, with increasing cards
 
 ## Run Locally
 
