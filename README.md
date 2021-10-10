@@ -122,6 +122,9 @@ E.g.
 }
 ```
 
+- Countdown timer
+- Dynamic grid elements
+
 ### Useful resources
 
 - [Eddy Sims Codepen](https://codepen.io/edeesims/pen/iGDzk) - card flipping animation
