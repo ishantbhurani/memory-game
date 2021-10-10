@@ -1,6 +1,6 @@
 # Memory Game
 
-Match the cards
+Match the cards before you run out of time! ⏰
 
 ## Table of contents
 
