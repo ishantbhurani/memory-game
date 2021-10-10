@@ -40,6 +40,8 @@ Match the cards before you run out of time! ⏰
 - Cards arranged randomly
 - Countdown timer
 - Levels, with increasing cards
+- Timer increases with each level
+- Matching the correct pair rewards extra 2 seconds
 
 ## Run Locally
 
