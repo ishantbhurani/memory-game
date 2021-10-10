@@ -20,13 +20,15 @@ Match the cards before you run out of time! ⏰
 
 ### Screenshots
 
-<kbd>![Memory game preview](https://user-images.githubusercontent.com/67356291/136655619-c885a1bf-b654-4aa8-b2a9-87be38c0b53d.png)</kbd>
+<kbd>![Memory game preview](https://user-images.githubusercontent.com/67356291/136698884-d4354d87-3847-49b3-87ea-efd9f44ddf55.png)</kbd>
 
-<kbd>![Memory game overlay preview](https://user-images.githubusercontent.com/67356291/136655616-9ede6ca8-a95e-41c7-a348-f6127f34ddd3.png)</kbd>
+<kbd>![Memory game win preview](https://user-images.githubusercontent.com/67356291/136698880-9dd64e43-bfbd-40d7-9231-79364d52ba80.png)</kbd>
 
-<kbd>![Memory game mobile overlay preview](https://user-images.githubusercontent.com/67356291/136655617-9331ed6c-5d65-4096-82be-2e3ec8887fdf.png)</kbd>
+<kbd>![Memory game lost preview](https://user-images.githubusercontent.com/67356291/136698882-05ce6b0c-8e3e-458e-943a-7fa232e646e0.png)</kbd>
 
-<kbd>![Memory game mobile preview](https://user-images.githubusercontent.com/67356291/136655618-1c0a5231-9e23-491d-9abc-d9351306cd3f.png)</kbd>
+<kbd>![Memory game mobile preview](https://user-images.githubusercontent.com/67356291/136698877-4f50ed5d-19d9-4eee-869a-73d35613cbb1.png)</kbd>
+
+<kbd>![Memory game lost mobile preview](https://user-images.githubusercontent.com/67356291/136698876-5157dbcb-fff0-4665-b1b7-4255e4bc0ffe.png)</kbd>
 
 ### Links
 
