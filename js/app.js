@@ -123,13 +123,15 @@ continueBtn.addEventListener("click", function () {
   timeLeft += 5;
 });
 
-setInterval(() => {
-  if (timeLeft > 0) {
-    --timeLeft;
-    timeLeftText.textContent = timeLeft;
-  } else {
-    console.log("Timeout!");
-    // end game
-    overlay.classList.add("show");
-  }
-}, 1000);
+window.addEventListener("DOMContentLoaded", function () {
+  setInterval(() => {
+    if (timeLeft > 0) {
+      --timeLeft;
+      timeLeftText.textContent = timeLeft;
+    } else {
+      console.log("Timeout!");
+      // end game
+      overlay.classList.add("show");
+    }
+  }, 1000);
+});
