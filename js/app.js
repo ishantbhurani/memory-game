@@ -82,7 +82,7 @@ function renderCards(cards) {
 const cards = createCards();
 renderCards(cards);
 
-playAgainBtn.addEventListener("click", function () {
+function gameReset() {
   // reset score
   score = 0;
   scoreText.textContent = "Score: 0";
@@ -96,26 +96,19 @@ playAgainBtn.addEventListener("click", function () {
 
   // remove overlay
   overlay.classList.remove("show");
+}
+
+playAgainBtn.addEventListener("click", function () {
+  gameReset();
 });
 
 continueBtn.addEventListener("click", function () {
-  // reset score
-  score = 0;
-  scoreText.textContent = "Score: 0";
-
-  // reset flipped cards
-  flippedCards = [];
-
   // level up
   gameLevel += 1;
   levelText.textContent = `Level: ${gameLevel}`;
 
+  // add more images/cards
   images.push(images[Math.floor(Math.random() * 6)]);
 
-  // reset cards
-  const cards = createCards();
-  renderCards(cards);
-
-  // remove overlay
-  overlay.classList.remove("show");
+  gameReset();
 });
