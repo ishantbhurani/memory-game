@@ -66,6 +66,7 @@ E.g.
 ### Built with
 
 - Semantic HTML5 markup
+- Flexbox
 - CSS Grid
 
 ### What I learned
